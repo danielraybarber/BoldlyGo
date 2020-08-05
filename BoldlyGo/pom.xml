@@ -47,35 +47,35 @@
 				<artifactId>maven-clean-plugin</artifactId>
 				<version>3.1.0</version>
 				<executions>
-				  <execution>
-					<id>auto-clean</id>
-					<phase>initialize</phase>
-					<goals>
-					  <goal>clean</goal>
-					</goals>
-				  </execution>
+					<execution>
+						<id>auto-clean</id>
+						<phase>initialize</phase>
+						<goals>
+							<goal>clean</goal>
+						</goals>
+					</execution>
 				</executions>
-			  </plugin>
+			</plugin>
 			<!-- THIS IS THE PLUGIN TO COPY ANGULAR FILES TO STATIC WHEN RUNNING SPRINGBOOT APP -->
 			<plugin> 
-        <artifactId>maven-resources-plugin</artifactId>     
-    	<executions>  
-               <execution>   
-                       <id>copy-resources</id>    
-                      <phase>validate</phase> 
-                         <goals><goal>copy-resources</goal></goals>             
-             <configuration>                                 
-  <outputDirectory>${build.directory}/classes/static/</outputDirectory >      
-                             <resources>    
-                                         <resource>       <!-- Might have to change this below to match your files-->
-											  <!-- <directory>/Users/Daniel/Desktop/Boldly-go/BoldlyGo/AngularClient/dist/angularclient</directory>  -->
-											  <directory>C:/Users/jsdanios/Documents/GitHub/BoldlyGo/BoldlyGo/AngularClient/dist/angularclient</directory> 
-                                            </resource>   
-                                 </resources>   
-                        </configuration>        
-          </execution>   
-	   </executions> 
-	</plugin>
+				<artifactId>maven-resources-plugin</artifactId>     
+				<executions>  
+					<execution>   
+						<id>copy-resources</id>    
+						<phase>validate</phase> 
+						<goals><goal>copy-resources</goal></goals>             
+						<configuration>                                 
+							<outputDirectory>${build.directory}/classes/static/</outputDirectory >      
+							<resources>    
+								<resource>       <!-- Might have to change this below to match your files-->
+								<!-- <directory>/Users/Daniel/Desktop/Boldly-go/BoldlyGo/AngularClient/dist/angularclient</directory>  -->
+									<directory>C:/Users/jsdanios/Documents/GitHub/BoldlyGo/BoldlyGo/AngularClient/dist/angularclient</directory> 
+								</resource>   
+							</resources>   
+						</configuration>        
+					</execution>   
+				</executions> 
+			</plugin>
 		</plugins>
 	</build>
 
