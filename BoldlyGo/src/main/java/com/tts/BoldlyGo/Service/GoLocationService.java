@@ -94,17 +94,17 @@ public class GoLocationService {
         return locations;
     }
 
-    public void checkIfUserReachesLocation(Location location) {
-        User loggedInUser = userService.getLoggedInUser();
-        Location currentLocation = new Location(); //change this to user's location
-        List<GoLocation> userLocations = (goLocationRepository.findAllByUserOrderByCreatedAtDesc(loggedInUser));
-        GoLocation[] locationsArray = new GoLocation[userLocations.size()];
-        locationsArray = userLocations.toArray(locationsArray);
+    // public void checkIfUserReachesLocation(Location location) {
+    //     User loggedInUser = userService.getLoggedInUser();
+    //     Location currentLocation = new Location(); //change this to user's location
+    //     List<GoLocation> userLocations = (goLocationRepository.findAllByUserOrderByCreatedAtDesc(loggedInUser));
+    //     GoLocation[] locationsArray = new GoLocation[userLocations.size()];
+    //     locationsArray = userLocations.toArray(locationsArray);
 
-        for (int i=0; i<locationsArray.length; i++) {
-            if (getDistance(locationsArray[i].getLocation(), currentLocation) <= 0.25) {
-                locationsArray[i].setHasBeenReached(true);
-            }
-        }
-    }
+    //     for (int i=0; i<locationsArray.length; i++) {
+    //         if (getDistance(locationsArray[i].getLocation(), currentLocation) <= 0.25) {
+    //             locationsArray[i].setHasBeenReached(true);
+    //         }
+    //     }
+    // }
 }
