@@ -1,0 +1,14 @@
+{
+    "configurations": [
+        {
+            "type": "java",
+            "name": "Spring Boot-BoldlyGoApplication<BoldlyGo>",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "console": "internalConsole",
+            "mainClass": "com.tts.BoldlyGo.BoldlyGoApplication",
+            "projectName": "BoldlyGo",
+            "args": ""
+        }
+    ]
+}
