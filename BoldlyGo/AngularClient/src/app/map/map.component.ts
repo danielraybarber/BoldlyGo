@@ -1,42 +1,25 @@
-import {
-  Component,
-  AfterViewInit,
-  ViewChild,
-  ElementRef,
-  OnInit,
-} from '@angular/core';
+import { ViewChild, Component } from '@angular/core';
+import { } from 'googlemaps';
+
+import PlaceResult = google.maps.places.PlaceResult;
+import GeocoderRequest = google.maps.GeocoderRequest;
 
 @Component({
   selector: 'app-map',
   templateUrl: './map.component.html',
   styleUrls: ['./map.component.css'],
 })
-export class MapComponent implements OnInit {
-  @ViewChild('mapContainer', { static: true }) gmap: ElementRef;
+export class MapComponent {
+  @ViewChild('gmap') gmapElement: any;
   map: google.maps.Map;
-  lat = 40.73061;
-  lng = -73.935242;
-
-  coordinates = new google.maps.LatLng(this.lat, this.lng);
-
-  mapOptions: google.maps.MapOptions = {
-    center: this.coordinates,
-    zoom: 8,
-  };
-
-  marker = new google.maps.Marker({
-    position: this.coordinates,
-    map: this.map,
-  });
 
   ngOnInit() {
-    this.mapInitializer();
+    var mapProp = {
+      center: new google.maps.LatLng(18.5793, 73.8143),
+      zoom: 15,
+      mapTypeId: google.maps.MapTypeId.ROADMAP
+    };
+    this.map = new google.maps.Map(this.gmapElement.nativeElement, mapProp);
   }
 
-  mapInitializer() {
-    this.map = new google.maps.Map(this.gmap.nativeElement, this.mapOptions);
-    this.marker.setMap(this.map);
-  }
-
-  constructor() {}
 }
