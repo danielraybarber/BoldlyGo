@@ -6,9 +6,10 @@ import { HttpClientModule } from '@angular/common/http';
 import { AppComponent } from './app.component';
 import { UserService } from './components/service/user.service';
 import { MapComponent } from './components/map/map.component';
+import { MapEditorComponent } from './map-editor/map-editor.component';
 
 @NgModule({
-  declarations: [AppComponent, MapComponent],
+  declarations: [AppComponent, MapComponent, MapEditorComponent],
   imports: [BrowserModule, AppRoutingModule, HttpClientModule, FormsModule],
   providers: [UserService],
   bootstrap: [AppComponent],
