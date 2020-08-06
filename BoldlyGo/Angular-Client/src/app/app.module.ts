@@ -3,9 +3,9 @@ import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { RouterModule, Routes } from '@angular/router';
-import { AppService } from './service/app.service';
+import { AppService } from './components/service/app.service';
 import { HomeComponent } from './components/home/home.component';
-import { LoginComponent } from './login.component';
+import { LoginComponent } from './components/login/login.component';
 import { AppComponent } from './app.component';
 
 const routes: Routes = [
