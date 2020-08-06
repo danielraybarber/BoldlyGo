@@ -2279,3 +2279,33 @@ java.lang.NullPointerException
 
 !ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-08-05 14:44:01.726
 !MESSAGE executing callback sts4.classpath.CbeEuczY SUCCESS [done]
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-08-06 13:12:12.639
+!MESSAGE exists = true open = true => deleted = false
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-08-06 13:12:12.692
+!MESSAGE classpath=66 entries
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-08-06 13:12:12.694
+!MESSAGE buffering callback sts4.classpath.IiIBgjQt BoldlyGo false 66
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-08-06 13:12:12.694
+!MESSAGE executing callback sts4.classpath.IiIBgjQt 1 batched events
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-08-06 13:12:12.983
+!MESSAGE executing callback sts4.classpath.IiIBgjQt SUCCESS [done]
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-08-06 13:16:23.843
+!MESSAGE exists = true open = true => deleted = false
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-08-06 13:16:23.851
+!MESSAGE classpath=97 entries
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-08-06 13:16:23.856
+!MESSAGE buffering callback sts4.classpath.IiIBgjQt BoldlyGo false 97
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-08-06 13:16:23.856
+!MESSAGE executing callback sts4.classpath.IiIBgjQt 1 batched events
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-08-06 13:16:23.881
+!MESSAGE executing callback sts4.classpath.IiIBgjQt SUCCESS [done]
