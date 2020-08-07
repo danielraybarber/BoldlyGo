@@ -22,10 +22,10 @@ import org.hibernate.annotations.OnDeleteAction;
 @Table(name="GOLOCATION")
 public class GoLocation {
     @Id
-	@GeneratedValue(strategy = GenerationType.AUTO)
-	@Column(name="go_location_id")
+    @GeneratedValue(strategy = GenerationType.AUTO)
+    @Column(name="go_location_id")
     private Long id;
-    
+
     @ManyToOne(fetch = FetchType.LAZY, optional = false)
     @JoinColumn(name = "user_id")
     @OnDelete(action = OnDeleteAction.CASCADE)
@@ -33,7 +33,7 @@ public class GoLocation {
 
     @CreationTimestamp
     private Date createdAt;
-    
+
     @OneToOne(cascade = CascadeType.ALL)
     private Location location;
 
@@ -58,7 +58,7 @@ public class GoLocation {
     public void setLocation(Location location) {
         this.location = location;
     }
-    
+
     public boolean getHasBeenReached() {
         return hasBeenReached;
     }

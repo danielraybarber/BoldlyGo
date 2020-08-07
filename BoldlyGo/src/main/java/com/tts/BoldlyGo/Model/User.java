@@ -22,43 +22,43 @@ import org.hibernate.validator.constraints.Length;
 @Table(name = "USER")
 public class User {
 
-    @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
-    @Column(name = "user_id")
-    private Long id;
+   @Id
+   @GeneratedValue(strategy = GenerationType.AUTO)
+   @Column(name = "user_id")
+   private Long id;
 
-    @NotEmpty(message = "Please provide a username")
-    @Length(min = 3, message = "Your username must have at least 3 characters")
-    @Length(max = 15, message = "Your username cannot have more than 15 characters")
-    @Pattern(regexp = "[^\\s]+", message = "Your username cannot contain spaces")
-    private String username;
+   @NotEmpty(message = "Please provide a username")
+   @Length(min = 3, message = "Your username must have at least 3 characters")
+   @Length(max = 15, message = "Your username cannot have more than 15 characters")
+   @Pattern(regexp = "[^\\s]+", message = "Your username cannot contain spaces")
+   private String username;
 
-    @Length(min = 5, message = "Your password must have at least 5 characters")
-    @NotEmpty(message = "Please provide a password")
-    @JsonProperty(access = Access.WRITE_ONLY)
-    private String password;
+   @Length(min = 5, message = "Your password must have at least 5 characters")
+   @NotEmpty(message = "Please provide a password")
+   @JsonProperty(access = Access.WRITE_ONLY)
+   private String password;
 
-    // @Email
-    // private String email;
+   // @Email
+   // private String email;
 
-    private int active;
+   private int active;
 
-    @CreationTimestamp
-    private Date createdAt;
+   @CreationTimestamp
+   private Date createdAt;
 
-    public User() {
+   public User() {
 
-    }
+   }
 
-    // if email is implement, add arg 'String email'
-    public User(Long id, String username, String password, int active, Date createdAt) {
-        this.id = id;
-        this.setUsername(username);
-        this.password = password;
-        this.active = active;
+   // if email is implement, add arg 'String email'
+   public User(Long id, String username, String password, int active, Date createdAt) {
+       this.id = id;
+       this.setUsername(username);
+       this.password = password;
+       this.active = active;
 		this.createdAt = createdAt;
-      //this.setEmail(email);
-    }
+     //this.setEmail(email);
+   }
 
 	public String getUsername() {
 		return username;
@@ -74,15 +74,15 @@ public class User {
 
 	public void setPassword(String password) {
 		this.password = password;
-    }
-    
-    public int getActive() {
-        return active;
-    }
+   }
+   
+   public int getActive() {
+       return active;
+   }
 
-    public void setActive(int active) {
-        this.active = active;
-    }
+   public void setActive(int active) {
+       this.active = active;
+   }
 
 	// public String getEmail() {
 	// 	return email;

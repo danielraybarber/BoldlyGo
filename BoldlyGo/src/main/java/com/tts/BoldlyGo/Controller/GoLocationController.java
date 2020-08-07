@@ -10,13 +10,13 @@ import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 public class GoLocationController {
-    @Autowired    
-    private GoLocationService goLocationService;
+   @Autowired
+   private GoLocationService goLocationService;
 
-    @PostMapping(value={"/map"})
-    public Location getLocationForMap(LocationRequest request) {
-        Location startingLocation = goLocationService.getCoordinates(request.getAddress() + " " + request.getCity() + " " + request.getState());
+   @PostMapping(value={"/map"})
+   public Location getLocationForMap(LocationRequest request) {
+       Location startingLocation = goLocationService.getCoordinates(request.getAddress() + " " + request.getCity() + " " + request.getState());
        return startingLocation;
-  }
-
+   }
+   
 }
