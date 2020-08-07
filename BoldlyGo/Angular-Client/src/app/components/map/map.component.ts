@@ -22,7 +22,7 @@ export class MapComponent implements AfterViewInit {
 
   mapOptions: google.maps.MapOptions = {
     center: this.coordinates,
-    zoom: 8,
+    zoom: 2,
   };
 
   marker = new google.maps.Marker({
@@ -70,7 +70,11 @@ export class MapComponent implements AfterViewInit {
       this.lat = lats[i];
       this.lng = longs[i];
     }
+
     this.x++;
+    if (this.x > 10) {
+      this.x = 1;
+    }
     this.coordinates = new google.maps.LatLng(this.lat, this.lng);
     this.marker = new google.maps.Marker({
       position: this.coordinates,

@@ -244,7 +244,7 @@ class MapComponent {
         this.coordinates = new google.maps.LatLng(this.lat, this.lng);
         this.mapOptions = {
             center: this.coordinates,
-            zoom: 8,
+            zoom: 2,
         };
         this.marker = new google.maps.Marker({
             position: this.coordinates,
@@ -289,6 +289,9 @@ class MapComponent {
             this.lng = longs[i];
         }
         this.x++;
+        if (this.x > 10) {
+            this.x = 1;
+        }
         this.coordinates = new google.maps.LatLng(this.lat, this.lng);
         this.marker = new google.maps.Marker({
             position: this.coordinates,
@@ -303,7 +306,7 @@ MapComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineCompo
     } if (rf & 2) {
         var _t;
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵqueryRefresh"](_t = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵloadQuery"]()) && (ctx.gmap = _t.first);
-    } }, decls: 6, vars: 0, consts: [["type", "button", 1, "btn", "btn-light", "mybtn", 3, "click"], ["id", "map"], ["mapContainer", ""]], template: function MapComponent_Template(rf, ctx) { if (rf & 1) {
+    } }, decls: 6, vars: 0, consts: [["type", "button", 1, "btn", "btn-light", "goLEFT", 3, "click"], ["id", "map"], ["mapContainer", ""]], template: function MapComponent_Template(rf, ctx) { if (rf & 1) {
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](0, "br");
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](1, "button", 0);
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵlistener"]("click", function MapComponent_Template_button_click_1_listener() { return ctx.onClickMe(); });
@@ -311,7 +314,7 @@ MapComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineCompo
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](3, "br");
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](4, "div", 1, 2);
-    } }, styles: ["#map[_ngcontent-%COMP%] {\n    height: 600px;\n    width: 80%;\n    margin-left: auto;\n    margin-right: auto;\n    margin-bottom: 200px;\n   }\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvY29tcG9uZW50cy9tYXAvbWFwLmNvbXBvbmVudC5jc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkdBQUc7SUFDQyxhQUFhO0lBQ2IsVUFBVTtJQUNWLGlCQUFpQjtJQUNqQixrQkFBa0I7SUFDbEIsb0JBQW9CO0dBQ3JCIiwiZmlsZSI6InNyYy9hcHAvY29tcG9uZW50cy9tYXAvbWFwLmNvbXBvbmVudC5jc3MiLCJzb3VyY2VzQ29udGVudCI6WyIgICAjbWFwIHtcbiAgICBoZWlnaHQ6IDYwMHB4O1xuICAgIHdpZHRoOiA4MCU7XG4gICAgbWFyZ2luLWxlZnQ6IGF1dG87XG4gICAgbWFyZ2luLXJpZ2h0OiBhdXRvO1xuICAgIG1hcmdpbi1ib3R0b206IDIwMHB4O1xuICAgfSJdfQ== */"] });
+    } }, styles: ["#map[_ngcontent-%COMP%] {\n    height: 600px;\n    width: 80%;\n    margin-left: auto;\n    margin-right: auto;\n    margin-bottom: 200px;\n   }\n   \n.goLEFT[_ngcontent-%COMP%]{\n\tmargin-left: auto;\n\tmargin-right: auto;\n\tmargin-bottom: 30px;\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvY29tcG9uZW50cy9tYXAvbWFwLmNvbXBvbmVudC5jc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkdBQUc7SUFDQyxhQUFhO0lBQ2IsVUFBVTtJQUNWLGlCQUFpQjtJQUNqQixrQkFBa0I7SUFDbEIsb0JBQW9CO0dBQ3JCOztBQUVIO0NBQ0MsaUJBQWlCO0NBQ2pCLGtCQUFrQjtDQUNsQixtQkFBbUI7QUFDcEIiLCJmaWxlIjoic3JjL2FwcC9jb21wb25lbnRzL21hcC9tYXAuY29tcG9uZW50LmNzcyIsInNvdXJjZXNDb250ZW50IjpbIiAgICNtYXAge1xuICAgIGhlaWdodDogNjAwcHg7XG4gICAgd2lkdGg6IDgwJTtcbiAgICBtYXJnaW4tbGVmdDogYXV0bztcbiAgICBtYXJnaW4tcmlnaHQ6IGF1dG87XG4gICAgbWFyZ2luLWJvdHRvbTogMjAwcHg7XG4gICB9XG4gICBcbi5nb0xFRlR7XG5cdG1hcmdpbi1sZWZ0OiBhdXRvO1xuXHRtYXJnaW4tcmlnaHQ6IGF1dG87XG5cdG1hcmdpbi1ib3R0b206IDMwcHg7XG59Il19 */"] });
 /*@__PURE__*/ (function () { _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵsetClassMetadata"](MapComponent, [{
         type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"],
         args: [{
