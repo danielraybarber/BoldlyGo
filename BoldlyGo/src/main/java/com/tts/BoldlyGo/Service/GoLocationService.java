@@ -10,7 +10,7 @@ import org.springframework.stereotype.Service;
 import org.springframework.web.client.RestTemplate;
 
 @Service
-public class AdventureLocationService {
+public class GoLocationService {
     @Value("${geocoding_url}")
     public String geocodingUrl;
 

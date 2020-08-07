@@ -40,4 +40,43 @@ export class MapComponent implements AfterViewInit {
   }
 
   constructor() {}
+  x = 1;
+  onClickMe() {
+    for (let i = 0; i < this.x; i++) {
+      let longs: Array<number> = [
+        -74.044502,
+        2.352222,
+        0,
+        86.924973,
+        116.570374,
+        -77.03653,
+        115.793,
+        25,
+        116.5323,
+        104.523,
+      ];
+      let lats: Array<number> = [
+        40.689247,
+        48.56613,
+        0,
+        27.988121,
+        40.431908,
+        38.897675,
+        37.2431,
+        71,
+        36.5323,
+        104.523,
+      ];
+      this.lat = lats[i];
+      this.lng = longs[i];
+    }
+    this.x++;
+    this.coordinates = new google.maps.LatLng(this.lat, this.lng);
+    this.marker = new google.maps.Marker({
+      position: this.coordinates,
+      map: this.map,
+    });
+
+    this.mapInitializer();
+  }
 }
